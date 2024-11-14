@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharif Bina - Full Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff5722;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .main-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #f4f7fa;
+        }
+        .main-section h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+        .main-section h1 span {
+            color: #ff5722;
+        }
+        .main-section p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .cta-button {
+            padding: 10px 25px;
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e64a19;
+        }
+        .profile-photo {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .affiliations {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+        .affiliations img {
+            margin: 0 20px;
+            height: 40px;
+        }
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .main-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-photo {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">S</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="content">
+            <h1>Hello, I'm <span>Sharif Bina</span></h1>
+            <p>I'm a Full Stack Developer specializing in JavaScript, HTML, CSS, and Laravel.</p>
+            <button class="cta-button">Hire Me</button>
+        </div>
+        <div class="image">
+            <img src="https://scontent.fevn6-1.fna.fbcdn.net/v/t39.30808-1/412826068_879332537216688_3658085532346022328_n.jpg?stp=c0.0.960.960a_dst-jpg_s200x200&_nc_cat=104&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=MhxuflaDb1sQ7kNvgHO7JRb&_nc_zt=24&_nc_ht=scontent.fevn6-1.fna&_nc_gid=A6LG6jX2h5g1sbioJZ5MOUx&oh=00_AYA2jv44kj8ZxA3l86s2MbhpOOnlmMIiykMpL679fahRpA&oe=671CFF23" alt="Sharif Bina" class="profile-photo">
+        </div>
+    </section>
+
+    <!-- Affiliations Section -->
+    <section class="affiliations">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Forbes-logo.svg" alt="Forbes Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Dribbble_logo.svg" alt="Dribbble Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/99designs_Logo.svg" alt="99designs Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Awwwards_logo.svg" alt="Awwwards Logo">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Sharif Bina &copy; 2024. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

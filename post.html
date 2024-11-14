@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.profile {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-content {
+    margin: 10px 0;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #155cba;
+}
+
+.comments-section {
+    margin-top: 10px;
+}
+
+#comment-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#comments-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#comments-list li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f0f2f5;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="asset/images/IMG_7803.png" alt="Profile Picture" class="profile-pic">
+            <h2>Sharif Bina</h2>
+        </div>
+
+        <!-- Post Section -->
+        <div class="post">
+            <div class="post-header">
+                <img src="asset/images/IMG_7803.png" alt="Sharif Bina" class="post-profile-pic">
+                <div>
+                    <h3>Sharif Bina</h3>
+                    <p>1 hr ago</p>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos omnis eius eaque quis rem consequatur laboriosam. Sed atque voluptate culpa! Reprehenderit, exercitationem? Corporis reprehenderit dolorum odit unde magnam, voluptate recusandae.</p>
+                <img src="asset/images/laravel.jpg" alt="Post Image" class="post-image">
+            </div>
+            <div class="post-actions">
+                <button onclick="likePost()">Like <span id="like-count">0</span></button>
+                <button onclick="toggleComments()">Comment</button>
+                <button onclick="sharePost()">Share</button>
+            </div>
+            <div id="comments-section" class="comments-section" style="display: none;">
+                <input type="text" placeholder="Write a comment..." id="comment-input">
+                <button onclick="addComment()">Post</button>
+                <ul id="comments-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js">
+        let likeCount = 0;
+
+function likePost() {
+    likeCount++;
+    document.getElementById("like-count").innerText = likeCount;
+}
+
+function toggleComments() {
+    const commentsSection = document.getElementById("comments-section");
+    commentsSection.style.display = commentsSection.style.display === "none" ? "block" : "none";
+}
+
+function addComment() {
+    const commentInput = document.getElementById("comment-input");
+    const commentText = commentInput.value.trim();
+    
+    if (commentText) {
+        const commentsList = document.getElementById("comments-list");
+        const newComment = document.createElement("li");
+        newComment.innerText = commentText;
+        commentsList.appendChild(newComment);
+        
+        commentInput.value = "";
+    }
+}
+
+function sharePost() {
+    alert("Post shared!");
+}
+
+    </script>
+</body>
+</html>
